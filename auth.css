@@ -196,19 +196,152 @@
 
 	.auth-container {
 		padding: 1.5rem;
+		margin: 0.5rem;
+		border-radius: 12px;
+		max-width: 100%;
+	}
+
+	.auth-tabs {
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+		padding-bottom: 0.8rem;
 	}
 
 	.auth-tab {
-		padding: 0.8rem 1rem;
-		font-size: 1rem;
+		padding: 0.7rem 1rem;
+		font-size: 0.95rem;
 	}
 
 	.auth-form h2 {
-		font-size: 1.5rem;
+		font-size: 1.4rem;
+		margin-bottom: 1.2rem;
+	}
+
+	.form-group {
+		gap: 0.4rem;
+	}
+
+	.form-group label {
+		font-size: 0.9rem;
 	}
 
 	.form-group input {
-		padding: 0.9rem;
+		padding: 0.8rem;
+		font-size: 0.95rem;
+	}
+
+	.auth-form .btn {
+		padding: 0.8rem;
+		font-size: 1rem;
+	}
+
+	.forgot-password {
+		font-size: 0.9rem;
+		padding: 0.4rem 0.8rem;
+	}
+
+	.home-btn {
+		padding: 6px 12px;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.auth-main {
+		padding: 0.5rem;
+	}
+
+	.auth-container {
+		padding: 1.2rem;
+		margin: 0.3rem;
+		border-radius: 10px;
+	}
+
+	.auth-tabs {
+		gap: 0.3rem;
+		margin-bottom: 1.2rem;
+		padding-bottom: 0.6rem;
+	}
+
+	.auth-tab {
+		padding: 0.6rem 0.8rem;
+		font-size: 0.9rem;
+	}
+
+	.auth-form h2 {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.form-group {
+		gap: 0.3rem;
+	}
+
+	.form-group label {
+		font-size: 0.85rem;
+	}
+
+	.form-group input {
+		padding: 0.7rem;
+		font-size: 0.9rem;
+	}
+
+	.auth-form .btn {
+		padding: 0.7rem;
+		font-size: 0.95rem;
+	}
+
+	.forgot-password {
+		font-size: 0.85rem;
+		padding: 0.3rem 0.6rem;
+	}
+
+	.home-btn {
+		padding: 5px 10px;
+		font-size: 0.85rem;
+	}
+}
+
+/* Улучшения для темной темы на мобильных устройствах */
+@media (max-width: 640px) {
+	[data-theme='dark'] .auth-container {
+		background: rgba(30, 30, 30, 0.95);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+	}
+
+	[data-theme='dark'] .form-group input {
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	[data-theme='dark'] .form-group input:focus {
+		box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+	}
+}
+
+/* Улучшения для тач-устройств */
+@media (hover: none) {
+	.auth-tab:hover {
+		background: none;
+	}
+
+	.auth-tab:active {
+		background: var(--hover-bg);
+	}
+
+	.auth-form .btn:hover {
+		transform: none;
+	}
+
+	.auth-form .btn:active {
+		transform: scale(0.98);
+	}
+
+	.forgot-password:hover {
+		background: none;
+	}
+
+	.forgot-password:active {
+		background: var(--hover-bg);
 	}
 }
 
