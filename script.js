@@ -1780,16 +1780,10 @@ function setActiveLessonFromHash() {
 
 	const [category, lessonId] = hash.split('/')
 	if (category && lessonId) {
-		// Отображаем уроки категории
+		// Обычный случай: раздел и урок
 		renderLessons(category)
-
-		// Загружаем урок
 		loadLesson(category, lessonId)
-
-		// Обновляем состояние сайдбара
 		updateSidebarActiveState(category, lessonId)
-
-		// Делаем кнопку категории активной
 		const categoryButton = document.querySelector(
 			`.category-list button[data-category="${category}"]`
 		)
@@ -1798,6 +1792,12 @@ function setActiveLessonFromHash() {
 				btn.classList.remove('active')
 			})
 			categoryButton.classList.add('active')
+		}
+	} else if (category) {
+		// Если указан только раздел, открываем первый урок этого раздела
+		const firstLesson = lessonsByCategory[category]?.[0]
+		if (firstLesson) {
+			navigateToLesson(category, firstLesson.id)
 		}
 	}
 }
@@ -1839,8 +1839,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	loadLessons()
 	initSidebar()
 	initTheme()
-	showInitialCategory() // Показываем первый раздел
-	setActiveLessonFromHash()
+	if (window.location.hash) {
+		setActiveLessonFromHash()
+	} else {
+		showInitialCategory()
+	}
 	initializeEventListeners()
 })
 
