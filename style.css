@@ -2058,15 +2058,12 @@ pre {
 		display: none !important;
 	}
 	.theme-toggle {
-		align-self: center;
-		margin: 0 0 0 0.5rem;
-		min-width: 32px;
-		height: 22px;
-		padding: 2px 4px;
-		border-radius: 14px;
-		font-size: 0.9rem;
-		gap: 4px;
-		order: 2;
+		display: flex !important;
+		position: static !important;
+		margin-left: auto;
+		min-width: 40px;
+		height: 28px;
+		padding: 4px;
 	}
 	.theme-icon {
 		width: 16px;
