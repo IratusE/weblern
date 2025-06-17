@@ -2037,9 +2037,10 @@ pre {
 		padding: 0.3rem 0;
 	}
 	.header .container {
-		flex-direction: column;
-		align-items: stretch;
-		gap: 0.3rem;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.2rem;
 		height: auto;
 		padding: 0.3rem 0.2rem;
 		position: static;
@@ -2048,41 +2049,32 @@ pre {
 		position: static;
 		transform: none;
 		text-align: center;
-		margin: 0.2rem 0 0.2rem 0;
+		margin: 0;
 		font-size: 1.1rem;
+		flex: 1 1 auto;
 		order: 1;
 	}
 	.auth-container {
-		flex-direction: column;
-		align-items: stretch;
-		gap: 0.2rem;
-		margin-left: 0;
-		order: 2;
-		width: 100%;
-	}
-	.auth-buttons {
-		flex-direction: row;
-		gap: 0.2rem;
-		width: 100%;
-		justify-content: center;
-	}
-	.auth-buttons .btn {
-		flex: 1 1 0;
-		width: 100%;
-		font-size: 1rem;
-		padding: 0.6rem 0.2rem;
-		margin: 0;
+		display: none !important;
 	}
 	.theme-toggle {
 		align-self: center;
-		margin: 0.2rem 0 0.2rem 0;
-		min-width: 40px;
-		height: 24px;
-		order: 3;
+		margin: 0 0 0 0.5rem;
+		min-width: 32px;
+		height: 22px;
+		padding: 2px 4px;
+		border-radius: 14px;
+		font-size: 0.9rem;
+		gap: 4px;
+		order: 2;
+	}
+	.theme-icon {
+		width: 16px;
+		height: 16px;
 	}
 	.toggle-sidebar {
 		position: static;
-		margin: 0.2rem auto 0.2rem 0;
+		margin: 0 0.5rem 0 0;
 		order: 0;
 	}
 }
